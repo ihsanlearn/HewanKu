@@ -25,6 +25,16 @@ const BeliSapi = () => {
 export default BeliSapi;
 
 
+const dataSapi = [
+    {
+        id: 1,
+        name: "",
+        description: "",
+        image: "../../assets/img/Sapi/sapi1.jpg",
+        price: "Rp11.999.000,00"
+    }
+]
+
 const CardJualSapi = () => {
     return (
         <Card style={{ width: '18rem', marginTop: "2rem" }}>
@@ -32,7 +42,10 @@ const CardJualSapi = () => {
             <Card.Body>
                 <Card.Title>Sapi Afrika</Card.Title>
                 <Card.Text>Sapi tanpa kandungan air didalam tubuhnya karena sangat krisis air di daerah ini</Card.Text>
-                <Button variant="danger">Beli Hewan</Button>
+                <div className="d-flex">
+                    <Button variant="danger">Beli Hewan</Button>
+                    <p className="ms-4">{dataSapi[0].price}</p>
+                </div>
             </Card.Body>
         </Card>
     )
